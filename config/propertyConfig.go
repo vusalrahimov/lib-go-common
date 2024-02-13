@@ -64,15 +64,11 @@ func loadRemoteConfig(env string) {
 	if consulErr != nil {
 		log.Fatal(consulErr)
 	}
-
-	fmt.Println(viper.AllKeys())
 	viper.SetConfigType("json")
 	vaultConfigErr := viper.ReadConfig(strings.NewReader(getVaultConfigAsJson(env)))
 	if vaultConfigErr != nil {
 		log.Fatal(vaultConfigErr)
 	}
-	fmt.Println(viper.AllKeys())
-
 }
 
 func getVaultConfigAsJson(env string) string {
