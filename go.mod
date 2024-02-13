@@ -1,4 +1,4 @@
-module bitbucket.kapitalbank.az/scm/~rahimovvma/lib-go-common
+module github.com/vusalrahimov/lib-go-common
 
 go 1.21
 
